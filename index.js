@@ -1,3 +1,19 @@
+const http = require('http');
+
+const hostname = '0.0.0.0'; // 'localhost'; //  '138.197.235.123';
+const port = 80;
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World');
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+console.log(server);
+/////////////////////////////////////////
+
 const fetch = require('node-fetch');
 const schedule = require('node-schedule');
 
